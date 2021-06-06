@@ -17,6 +17,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/test', function() use ($router) {
+$router->get('/test', function() {
     dd("Test Lumen");
+});
+
+$router->get('/generate-key', function() {
+   return \Illuminate\Support\Str::random(32);
 });

@@ -25,8 +25,11 @@ $app = new Laravel\Lumen\Application(
 
 // $app->withFacades();
 
-// $app->withEloquent();
+$app->withEloquent();
 
+//generator
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+//generator
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
