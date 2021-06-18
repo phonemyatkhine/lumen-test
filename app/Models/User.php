@@ -30,4 +30,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    public function findForPassport($username)
+    {
+        return $this->where('email', $username)->first();
+    }
+
 }
